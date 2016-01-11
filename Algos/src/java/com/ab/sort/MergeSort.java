@@ -43,25 +43,23 @@ public class MergeSort implements Sort {
 		
 		int []x = new int[a.length + b.length];
 		
-		int indexA = 0, indexB = 0;
+		int indexA = 0, indexB = 0, i;
 		
 		//sort and merge smaller lists
-		for(int i=0; i<x.length; i++){
-			if(indexA >= a.length){
-				x[i] = b[indexB++];
-				continue;
-			}else if(indexB >= b.length){
-				x[i] = a[indexA++];
-				continue;
-			}
-			
+		for(i=0; indexA < a.length && indexB < b.length; i++){
 			if(a[indexA]<b[indexB]){
 				x[i] = a[indexA++];
 			}else{
 				x[i] = b[indexB++];
 			}
-			
-			
+		}
+		
+		//insert the remaining elements from either arrays
+		while(indexA < a.length){
+			x[i++] = a[indexA++];
+		}
+		while(indexB < b.length){
+			x[i++] = b[indexB++];
 		}
 		
 		return x;
