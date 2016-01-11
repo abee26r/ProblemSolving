@@ -4,6 +4,8 @@ package com.ab.sort;
  * 
  * Insertion Sort: Most Appropriate for small sets because stable and low memory overhead
  * 
+ * When N is guaranteed to be small, including as the base case of a quick sort or merge sort. While this is O(N^2), it has a very small constant and is a stable sort.
+ * 
  * Consider it as sorting two sets of values one to left and other to right.
  * We keep sorting elements to left by placing one element at a time from right to left in its 
  * correct position.

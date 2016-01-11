@@ -9,6 +9,9 @@ package com.ab.sort;
  * It can be practical if the input is usually in sort order 
  * but may occasionally have some out-of-order elements nearly in position.
  * 
+ * When you're doing something quick and dirty and for some reason you can't just use the standard library's sorting algorithm. 
+ * The only advantage these have over insertion sort is being slightly easier to implement.
+ * 
  * Worst case performance 	O(n^2)
  * Best case performance 	O(n)
  * Average case performance 	O(n^2)
