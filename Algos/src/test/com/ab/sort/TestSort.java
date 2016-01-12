@@ -16,6 +16,7 @@ public class TestSort {
 	private Sort quickSort;
 	private Sort mergeSort;
 	private Sort introSort;
+	private Sort selectionSort;
 	
 	int [] IN_ARR100= new int[]{3,1};
 	
@@ -28,6 +29,7 @@ public class TestSort {
 		quickSort = new QuickSort();
 		mergeSort = new MergeSort();
 		introSort = new IntroSort();
+		selectionSort = new SelectionSort();
 	}
 
 	@Test
@@ -72,11 +74,15 @@ public class TestSort {
 	
 	@Test
 	public final void testHeapSort(){
-		
-		int []arr = generateSampledata(100);
-		int []sortedArr = Arrays.copyOf(arr, 100);
-		Arrays.sort(sortedArr);
-		assertTrue(Arrays.equals(sortedArr, heapSort.sort(arr, 0)));
+		for(int i =0; i<100;i++){
+			int []arr = generateSampledata(250);
+			int []sortedArr = Arrays.copyOf(arr, 250);
+			Arrays.sort(sortedArr);
+			if(!Arrays.equals(sortedArr, heapSort.sort(arr, 0))){
+				System.out.println("wtf");
+			}
+			assertTrue(Arrays.equals(sortedArr, heapSort.sort(arr, 0)));
+		}
 		
 	}
 	
@@ -99,6 +105,17 @@ public class TestSort {
 		assertTrue(Arrays.equals(sortedArr, introSort.sort(arr, 0)));
 		
 	}
+	
+	@Test
+	public final void testSelectionSort(){
+		
+		int []arr = generateSampledata(100);
+		int []sortedArr = Arrays.copyOf(arr, 100);
+		Arrays.sort(sortedArr);
+		assertTrue(Arrays.equals(sortedArr, selectionSort.sort(arr, 0)));
+		
+	}
+	
 	
 	
 	private int[] generateSampledata(int count) {
