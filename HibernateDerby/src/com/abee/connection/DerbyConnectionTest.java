@@ -10,8 +10,8 @@ public class DerbyConnectionTest {
 
 		try {
 
-			String dbUrl = "jdbc:derby:abee/derby_db1;create=true";
-			Connection conn = DriverManager.getConnection(dbUrl);
+			String dbUrl = "jdbc:derby:abee/derby_git;create=false";
+			Connection conn = DriverManager.getConnection(dbUrl, "user", "password");
 			if (conn != null) {
 				System.out.println("Connected to derby");
 			}
