@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Mar 01 20:22:22 EST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0153-34eb-32c4-0000071d1930 
+on database directory C:\Users\abee\git\ProblemSolving\HibernateDerby\abee\derby_git with class loader sun.misc.Launcher$AppClassLoader@1b1f1f12 
+Loaded from file:/C:/Users/abee/.m2/repository/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_45-b18
+user.dir=C:\Users\abee\git\ProblemSolving\HibernateDerby
+os.name=Windows 8
+os.arch=amd64
+os.version=6.2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
