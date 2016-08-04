@@ -1,0 +1,166 @@
+
+"
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+	<soapenv:Header>
+		<q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes">
+			<q2:credentials>
+				<q2:UserID>PMEUSER</q2:UserID>
+				<q2:Role>ADMIN_MASTER</q2:Role>
+			</q2:credentials>
+		</q2:FndtHeader>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns2:MessageSubmitRequest
+			xmlns:ns2="http://fundtech.com/SCL/MessageSubmitService" xmlns="http://fundtech.com/SCL/CommonTypes">
+			<outputMode origPmntConversionType="AS-IS"
+				pmntConversionType="Pain_001">FULL</outputMode>
+			<ns2:MsgBatch>
+				<FndtHeader xsi:type="FndtMsgHeaderType"
+					xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<credentials>
+						<UserID>PMEUSER</UserID>
+					</credentials>
+				</FndtHeader>
+				<FndtPmntTxInf>
+					<FndtMsg>
+						<Header>
+							<P_MID forCreation="false">1653E23272D50MX2</P_MID>
+							<P_INIT_SRC_ID>PSUI</P_INIT_SRC_ID>
+							<D_SKIP_PERSIST_ON_ERROR>false</D_SKIP_PERSIST_ON_ERROR>
+							<D_KEEP_ORIG_MSG>false</D_KEEP_ORIG_MSG>
+						</Header>
+						<Msg>
+							<Pmnt>
+								<Document:Document
+									xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03"
+									xmlns:Document="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+									<CstmrCdtTrfInitn>
+										<GrpHdr>
+											<MsgId>e3a49f12-ad05-414a-8053895edd6e6bfc</MsgId>
+											<CreDtTm>2016-05-03T10:23:26.000-04:00</CreDtTm>
+											<NbOfTxs>1</NbOfTxs>
+											<InitgPty>
+												<Nm>TEST</Nm>
+												<Id>
+													<OrgId>
+														<Othr>
+															<Id>TEST</Id>
+															<Issr>Permanent Resident ID</Issr>
+														</Othr>
+													</OrgId>
+												</Id>
+												<CtctDtls>
+													<PhneNb>1234567890</PhneNb>
+												</CtctDtls>
+											</InitgPty>
+										</GrpHdr>
+										<PmtInf>
+											<PmtInfId>0</PmtInfId>
+											<PmtMtd>TRF</PmtMtd>
+											<ReqdExctnDt>2016-05-03</ReqdExctnDt>
+											<Dbtr>
+												<Nm>TESTER 1 NAME</Nm>
+												<PstlAdr>
+													<PstCd>12345</PstCd>
+													<TwnNm>CITY</TwnNm>
+													<CtrySubDvsn>PA</CtrySubDvsn>
+													<AdrLine>TESTER 1 ADDRESS1</AdrLine>
+													<AdrLine>TESTER 1 ADDRESS2</AdrLine>
+												</PstlAdr>
+											</Dbtr>
+											<DbtrAcct>
+												<Id>
+													<Othr>
+														<Id>0000001054</Id>
+													</Othr>
+												</Id>
+												<Tp>
+													<Cd>SVGS</Cd>
+												</Tp>
+												<Ccy>USD</Ccy>
+											</DbtrAcct>
+											<DbtrAgt>
+												<FinInstnId>
+													<ClrSysMmbId>
+														<ClrSysId>
+															<Cd>USABA</Cd>
+														</ClrSysId>
+														<MmbId>043000096</MmbId>
+													</ClrSysMmbId>
+												</FinInstnId>
+											</DbtrAgt>
+											<CdtTrfTxInf>
+												<PmtId>
+													<EndToEndId>721136c0-d8dc-40c1-b614f659a0ddc081
+													</EndToEndId>
+												</PmtId>
+												<Amt>
+													<InstdAmt Ccy="USD">8.88</InstdAmt>
+												</Amt>
+												<CdtrAgt>
+													<FinInstnId>
+														<ClrSysMmbId>
+															<ClrSysId>
+																<Cd>USABA</Cd>
+															</ClrSysId>
+															<MmbId>043000096</MmbId>
+														</ClrSysMmbId>
+														<PstlAdr />
+													</FinInstnId>
+												</CdtrAgt>
+												<Cdtr>
+													<Nm>NICK LAPCEVICH</Nm>
+													<PstlAdr>
+														<PstCd>15001</PstCd>
+														<TwnNm>ALIQUIPPA</TwnNm>
+														<CtrySubDvsn>PA</CtrySubDvsn>
+														<AdrLine>3119 RIDGE AVE</AdrLine>
+													</PstlAdr>
+												</Cdtr>
+												<CdtrAcct>
+													<Id>
+														<Othr>
+															<Id>1000010596</Id>
+														</Othr>
+													</Id>
+													<Tp>
+														<Cd>SVGS</Cd>
+													</Tp>
+												</CdtrAcct>
+											</CdtTrfTxInf>
+										</PmtInf>
+									</CstmrCdtTrfInitn>
+								</Document:Document>
+							</Pmnt>
+							<Extn>
+								<ProcessingPersistentInfo>
+									<P_OFFICE>USA</P_OFFICE>
+									<P_DEPARTMENT>USF</P_DEPARTMENT>
+									<P_TIME_STAMP>2016-05-03 10:23:27.745</P_TIME_STAMP>
+									<P_RMT_ACCEPTANCE_TIME>2016-05-03 10:23:59.074</P_RMT_ACCEPTANCE_TIME>
+								</ProcessingPersistentInfo>
+								<OperationalSection>
+									<D_BUTTON_ID>Submit</D_BUTTON_ID>
+								</OperationalSection>
+								<UserDefinedFields>
+									<System>
+										<INITFROM>BranchPNCToPNCTransfer</INITFROM>
+										<PURPOSEOFTRANS>TEST</PURPOSEOFTRANS>
+										<CUSTTYPE>RETAIL</CUSTTYPE>
+										<CUSTHAREV>true</CUSTHAREV>
+										<CUSTAWFEE>true</CUSTAWFEE>
+										<CUSTSIGAUT>true</CUSTSIGAUT>
+										<OBTAINAUT>true</OBTAINAUT>
+										<SIGVERIFD>true</SIGVERIFD>
+										<CUSTAPPEAR>true</CUSTAPPEAR>
+									</System>
+								</UserDefinedFields>
+							</Extn>
+						</Msg>
+					</FndtMsg>
+				</FndtPmntTxInf>
+			</ns2:MsgBatch>
+		</ns2:MessageSubmitRequest>
+	</soapenv:Body>
+</soapenv:Envelope>
+"

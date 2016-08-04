@@ -1,0 +1,100 @@
+"<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope"><soapenv:Header><q2:FndtHeader xmlns:q2="http://fundtech.com/SCL/CommonTypes"><q2:credentials><q2:UserID>PMEUSER</q2:UserID><q2:Role>ADMIN_MASTER</q2:Role></q2:credentials></q2:FndtHeader></soapenv:Header><soapenv:Body><ns2:MessageSubmitRequest xmlns:ns2="http://fundtech.com/SCL/MessageSubmitService" xmlns="http://fundtech.com/SCL/CommonTypes"><outputMode origPmntConversionType="AS-IS" pmntConversionType="Pain_001">FULL</outputMode><ns2:MsgBatch><FndtHeader xsi:type="FndtMsgHeaderType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><credentials><UserID>PMEUSER</UserID></credentials></FndtHeader><FndtPmntTxInf><FndtMsg><Header><P_INIT_SRC_ID>PSUI</P_INIT_SRC_ID><D_SKIP_PERSIST_ON_ERROR>true</D_SKIP_PERSIST_ON_ERROR><D_KEEP_ORIG_MSG>true</D_KEEP_ORIG_MSG></Header><Msg><Pmnt><Document:Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:Document="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03">
+    <CstmrCdtTrfInitn>
+        <GrpHdr>
+            <MsgId>7f13f5b7-2e12-476c-8599e47e904085ca</MsgId>
+            <CreDtTm>2016-05-10T16:02:36.000-04:00</CreDtTm>
+            <NbOfTxs>1</NbOfTxs>
+            <InitgPty>
+                <Id>
+                    <OrgId>
+                        <Othr>
+                            <Id>DUMMY</Id>
+                        </Othr>
+                    </OrgId>
+                </Id>
+                <CtctDtls/>
+            </InitgPty>
+        </GrpHdr>
+        <PmtInf>
+            <PmtInfId>0</PmtInfId>
+            <PmtMtd>TRF</PmtMtd>
+            <ReqdExctnDt>2016-05-10</ReqdExctnDt>
+            <Dbtr>
+                <Nm>DDA NAME CONTAINS MORE THAN 35 CHAR</Nm>
+                <PstlAdr>
+                    <PstCd>12345</PstCd>
+                    <TwnNm>DDA CITY HAS MORE THAN</TwnNm>
+                    <CtrySubDvsn>PA</CtrySubDvsn>
+                    <AdrLine>DDA ADDR1 RND12 HAS MORE THAN 35 CH</AdrLine>
+                    <AdrLine>DDA ADD2 RND12 HAS MORE THAN 35 CHA</AdrLine>
+                </PstlAdr>
+            </Dbtr>
+            <DbtrAcct>
+                <Id>
+                    <Othr>
+                        <Id>1041708552</Id>
+                    </Othr>
+                </Id>
+                <Tp>
+                    <Cd>CACC</Cd>
+                </Tp>
+                <Ccy>USD</Ccy>
+            </DbtrAcct>
+            <DbtrAgt>
+                <FinInstnId>
+                    <ClrSysMmbId>
+                        <ClrSysId>
+                            <Cd>USABA</Cd>
+                        </ClrSysId>
+                        <MmbId>043000096</MmbId>
+                    </ClrSysMmbId>
+                </FinInstnId>
+            </DbtrAgt>
+            <CdtTrfTxInf>
+                <PmtId>
+                    <EndToEndId>0cb534ad-746f-45bb-b969ac7fd732dbd3</EndToEndId>
+                </PmtId>
+                <Amt>
+                    <InstdAmt Ccy="USD">10.00</InstdAmt>
+                </Amt>
+                <CdtrAgt>
+                    <FinInstnId>
+                        <ClrSysMmbId>
+                            <ClrSysId>
+                                <Cd>USABA</Cd>
+                            </ClrSysId>
+                            <MmbId>100000004</MmbId>
+                        </ClrSysMmbId>
+                        <Nm>JPMORGAN CHASE BANK UAT3</Nm>
+                        <PstlAdr>
+                            <PstCd>10001</PstCd>
+                            <TwnNm>NEW YORK</TwnNm>
+                            <CtrySubDvsn>NY</CtrySubDvsn>
+                            <Ctry>US</Ctry>
+                            <AdrLine>270 PARK AVE</AdrLine>
+                            <AdrLine>12</AdrLine>
+                        </PstlAdr>
+                    </FinInstnId>
+                </CdtrAgt>
+                <Cdtr>
+                    <Nm>TEST</Nm>
+                    <PstlAdr>
+                        <PstCd>34567</PstCd>
+                        <TwnNm>CITY TEST</TwnNm>
+                        <CtrySubDvsn>TA</CtrySubDvsn>
+                        <Ctry>US</Ctry>
+                        <AdrLine>ADD TEST</AdrLine>
+                    </PstlAdr>
+                    <CtctDtls/>
+                </Cdtr>
+                <CdtrAcct>
+                    <Id>
+                        <Othr>
+                            <Id>34567890</Id>
+                        </Othr>
+                    </Id>
+                </CdtrAcct>
+            </CdtTrfTxInf>
+        </PmtInf>
+    </CstmrCdtTrfInitn>
+</Document:Document></Pmnt><Extn><ProcessingPersistentInfo><P_OFFICE>USA</P_OFFICE><P_DEPARTMENT>HRO</P_DEPARTMENT><P_RMT_ACCEPTANCE_TIME>2016-05-10 16:02:37.145</P_RMT_ACCEPTANCE_TIME></ProcessingPersistentInfo><OperationalSection><D_BUTTON_ID>Validate</D_BUTTON_ID></OperationalSection><UserDefinedFields><System><INITFROM>BeneficiaryTransfer</INITFROM><CUSTTYPE>RETAIL</CUSTTYPE></System></UserDefinedFields></Extn></Msg></FndtMsg></FndtPmntTxInf></ns2:MsgBatch></ns2:MessageSubmitRequest></soapenv:Body></soapenv:Envelope>"

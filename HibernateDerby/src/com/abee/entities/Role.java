@@ -1,57 +1,57 @@
 package com.abee.entities;
 
-import java.sql.Timestamp;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.IdClass;
 
 @Entity(name="ROLE")
+@IdClass(value= RolePK.class)
 public class Role {
 	
 	@Id
-	@Column(name="ROLE_ID")
-	private int roleId;
+	@Column(name="ROLE_APP")
+	private int roleApp;
 	
-	@Column(name="ROLE")
-	private String role;
+	@Column(name="ROLE_NM")
+	private String roleNm;
 	
-	@Column(name="DEPT")
-	private String dept;
+	@Column(name="ACCESS_DET")
+	private String accessDet;
 	
-	@Column(name="EFF_DATE")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Timestamp effDt;
-	
-	@Column(name="EXP_DATE")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Timestamp expDt;
-	
-	public String getRole() {
-		return role;
+	@Column(name="COMMENTS")
+	private String comments;
+
+	public int getRoleApp() {
+		return roleApp;
 	}
-	public void setRole(String role) {
-		this.role = role;
+
+	public void setRoleApp(int roleApp) {
+		this.roleApp = roleApp;
 	}
-	public String getDept() {
-		return dept;
+
+	public String getRoleNm() {
+		return roleNm;
 	}
-	public void setDept(String dept) {
-		this.dept = dept;
+
+	public void setRoleNm(String roleNm) {
+		this.roleNm = roleNm;
 	}
-	public Timestamp getEffDt() {
-		return effDt;
+
+	public String getAccessDet() {
+		return accessDet;
 	}
-	public void setEffDt(Timestamp effDt) {
-		this.effDt = effDt;
+
+	public void setAccessDet(String accessDet) {
+		this.accessDet = accessDet;
 	}
-	public Timestamp getExpDt() {
-		return expDt;
+
+	public String getComments() {
+		return comments;
 	}
-	public void setExpDt(Timestamp expDt) {
-		this.expDt = expDt;
+
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
 	
 	

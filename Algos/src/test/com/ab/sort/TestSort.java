@@ -2,7 +2,9 @@ package com.ab.sort;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -34,6 +36,8 @@ public class TestSort {
 
 	@Test
 	public final void testInsertionSort() {
+		List list = null;
+		ArrayList a = (ArrayList) list;
 		
 		int []arr = generateSampledata(100);
 		int []sortedArr = Arrays.copyOf(arr, 100);
