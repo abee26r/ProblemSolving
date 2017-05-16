@@ -19,12 +19,16 @@ public class TestSort {
 	private Sort mergeSort;
 	private Sort introSort;
 	private Sort selectionSort;
+	private SelectionSort2 s2;
+	private BubbleSort2 bs2 = new BubbleSort2();
+	private MergeSort2 ms2 = new MergeSort2();
 	
 	int [] IN_ARR100= new int[]{3,1};
 	
 	@Before
 	public void setUp() throws Exception {
 		insertionSort = new InsertionSort();
+		s2 = new SelectionSort2();
 		bubbleSort = new BubbleSort();
 		shellSort = new ShellSort();
 		heapSort = new HeapSort();
@@ -47,6 +51,18 @@ public class TestSort {
 	}
 	
 	@Test
+	public final void testSelSort2() {
+		List list = null;
+		ArrayList a = (ArrayList) list;
+		
+		int []arr = generateSampledata(100);
+		int []sortedArr = Arrays.copyOf(arr, 100);
+		Arrays.sort(sortedArr);
+		assertTrue(Arrays.equals(sortedArr, s2.sort(arr)));
+		
+	}
+	
+	@Test
 	public final void testShellSort() {
 		
 		int []arr = generateSampledata(100);
@@ -63,6 +79,15 @@ public class TestSort {
 		int []sortedArr = Arrays.copyOf(arr, 100);
 		Arrays.sort(sortedArr);
 		assertTrue(Arrays.equals(sortedArr, bubbleSort.sort(arr, 0)));
+		
+	}
+	@Test
+	public final void testBubbleSort2(){
+		
+		int []arr = generateSampledata(100);
+		int []sortedArr = Arrays.copyOf(arr, 100);
+		Arrays.sort(sortedArr);
+		assertTrue(Arrays.equals(sortedArr, bs2.sort(arr)));
 		
 	}
 	
@@ -97,6 +122,20 @@ public class TestSort {
 		int []sortedArr = Arrays.copyOf(arr, 100);
 		Arrays.sort(sortedArr);
 		assertTrue(Arrays.equals(sortedArr, mergeSort.sort(arr, 0)));
+		
+	}
+	
+	@Test
+	public final void testMergeSort2(){
+		
+		int []arr = generateSampledata(100);
+		System.out.println(Arrays.toString(arr));
+		int []sortedArr = Arrays.copyOf(arr, 100);
+		Arrays.sort(sortedArr);
+		int []array = ms2.sort(arr, 0, arr.length - 1);
+		
+		System.out.println(Arrays.toString(array));
+		assertTrue(Arrays.equals(sortedArr, array));
 		
 	}
 	
